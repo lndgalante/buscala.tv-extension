@@ -5,13 +5,15 @@ function getBuscalaTvUrl(movie) {
 }
 
 // attach "buscalaMenuContext" menu context to all pages
-chrome.runtime.onInstalled.addListener(function () {
+function handleInstallContextMenu() {
   chrome.contextMenus.create({
     contexts: ['selection'],
     id: 'buscalaMenuContext',
     title: 'Buscala.TV | ¿Dónde miro "%s"?',
   });
-});
+}
+
+chrome.runtime.onInstalled.addListener(handleInstallContextMenu);
 
 // attach click event for "buscalaMenuContext" menu context
 function handleContextMenuClick({ selectionText }) {
@@ -20,4 +22,3 @@ function handleContextMenuClick({ selectionText }) {
 }
 
 chrome.contextMenus.onClicked.addListener(handleContextMenuClick);
-c
