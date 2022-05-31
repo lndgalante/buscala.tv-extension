@@ -1,7 +1,8 @@
 {
-  "manifest_version": 3,
+  "version": "0.0.2",
   "name": "Buscala.TV",
-  "version": "0.0.1",
+  "manifest_version": 3,
   "permissions": ["contextMenus"],
-  "background": { "service_worker": "background.js" }
+  "background": { "service_worker": "background.js" },
+  "icons": { "16": "assets/icon-16.png", "48": "assets/icon-48.png", "128": "assets/icon-128.png" }
 }
