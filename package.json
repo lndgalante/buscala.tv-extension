@@ -1,0 +1,11 @@
+{
+  "name": "buscala.tv-extension",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:lndgalante/buscala.tv-extension.git",
+  "author": "Leonardo Galante <lndgalante@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "build": "zip -r -j -X buscala-tv.zip src/"
+  }
+}
