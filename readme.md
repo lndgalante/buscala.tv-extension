@@ -6,14 +6,16 @@
 
 3. Seleccionar en la esquina superior derecha **New Item**
 
-4) En la sección **Product details** completar con los siguientes datos
+4) Buscamos y dropeamos el archivo **buscala-tv.zip** que lo podemos generar corriendo **yarn build**
+
+5. En la sección **Product details** completar con los siguientes datos
 
 - Category: Search Tools
 - Language: Spanish (Latin America)
 
 ![chrome-store-1](/docs/chrome-store-1.png)
 
-5. En la sección **Graphic assets** completar con los siguientes datos
+6. En la sección **Graphic assets** completar con los siguientes datos
 
 - Store icon: usar el icono que esta en **src/assets/icon-128.png**
 - Global promo video: **https://youtu.be/vYgxcOxsIZg**
@@ -21,7 +23,7 @@
 
 ![chrome-store-2](/docs/chrome-store-2.png)
 
-6. En la sección **Additional details** completar con los siguientes datos
+7. En la sección **Additional details** completar con los siguientes datos
 
 - Homepage URL: **https://www.buscala.tv/**
 
