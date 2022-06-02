@@ -10,7 +10,22 @@
 
 5. En la sección **Product details** completar con los siguientes datos
 
-- Description: Selecciona el texto de tu película o serie y te buscamos en que servicios de Streaming podes verla.
+- Description:
+
+```
+¿Dónde miro la serie o película? Selecciona el texto de tu película o serie y te buscamos en qué servicios de Streaming podes verla.
+
+Funciona en los siguientes países:
+- 🇦🇷Argentina
+- 🇨🇱 Chile
+- 🇪🇸 España
+- 🇨🇴 Colombia
+- 🇵🇪 Perú
+- 🇲🇽 México
+- 🇵🇾 Paraguay
+- 🇺🇾 Uruguay
+```
+
 - Category: Search Tools
 - Language: Spanish (Latin America)
 
