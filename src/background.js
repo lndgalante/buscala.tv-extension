@@ -4,23 +4,17 @@ const CONTEXT_MENU_ID = 'buscalaTvMenuContext';
 
 // ⚒️ helpers
 function getBuscalaTvUrl(movie) {
-  const queryParameter = encodeURIComponent(movie);
-  return `${BASE_URL}/?search=${queryParameter}`;
+  return `${BASE_URL}/?search=${encodeURIComponent(movie)}`;
 }
 
 // 🎬 create "buscalaTvMenuContext" menu context to all pages
 function handleInstallContextMenu() {
-  chrome.contextMenus.create({
-    id: CONTEXT_MENU_ID,
-    contexts: ['selection'],
-    title: 'Buscala.TV | ¿Dónde miro "%s"?',
-  });
+  chrome.contextMenus.create({ id: CONTEXT_MENU_ID, contexts: ['selection'], title: 'Buscala.TV | ¿Dónde miro "%s"?' });
 }
 
 // 🖱 create click event for "buscalaTvMenuContext" menu context
 function handleContextMenuClick({ selectionText }) {
-  const url = getBuscalaTvUrl(selectionText);
-  chrome.tabs.create({ url });
+  chrome.tabs.create({ url: getBuscalaTvUrl(selectionText) });
 }
 
 // 📎 attach event listeners to chrome runtime and context menus
