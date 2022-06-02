@@ -1,2 +1,5 @@
 *.zip
 .DS_Store
+yarn.lock
+node_modules
+.parcel-cache
