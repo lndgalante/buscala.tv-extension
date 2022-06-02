@@ -1,5 +1,5 @@
 // 🧮 constants
-const BASE_URL = 'https://buscala.tv';
+const BASE_URL = 'https://www.buscala.tv';
 const CONTEXT_MENU_ID = 'buscalaTvMenuContext';
 
 // 🔧 helpers
