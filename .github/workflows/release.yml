@@ -1,0 +1,29 @@
+name: GitHub Actions Demo
+on: 
+  push:
+    branches:
+      - "main"
+jobs:
+  Create-Release:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Set up Node.js ⚙️
+        uses: actions/setup-node@v2
+        with:
+          node-version: '16.x'
+      - name: Checking out repo
+        uses: actions/checkout@v3
+      - uses: borales/actions-yarn@v2.0.0
+        with:
+          cmd: install
+      - uses: borales/actions-yarn@v2.0.0
+        with:
+          cmd: parcel:build
+      - uses: montudor/action-zip@v1
+        with:
+          args: zip -qq -r release.zip src/
+      - name: Release
+        uses: softprops/action-gh-release@v1
+        with:
+          files: release.zip
+      - run: echo "🍏 This job's status is ${{ job.status }}."
