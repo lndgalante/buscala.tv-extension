@@ -25,7 +25,8 @@
 
 7. En la sección **Additional details** completar con los siguientes datos
 
-- Homepage URL: **https://www.buscala.tv/**
+- Homepage URL: **https://www.buscala.tv**
+- Support URL: **https://github.com/lndgalante/buscala.tv-extension**
 
 ![chrome-store-3](/docs/chrome-store-3.png)
 
