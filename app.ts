@@ -4,7 +4,7 @@ const CONTEXT_MENU_ID = 'buscalaTvMenuContext';
 
 // 🔧 helpers
 function getBuscalaTvUrl(movie: string) {
-  return `${BASE_URL}/?search=${encodeURIComponent(movie)}`;
+  return `${BASE_URL}/?search=${encodeURIComponent(movie)}&origin=addon`;
 }
 
 // 🎬 create "buscalaTvMenuContext" menu context to all pages
