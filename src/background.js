@@ -1,14 +1,18 @@
+// 🧮 constants
+const BASE_URL = 'https://buscala.tv';
+const CONTEXT_MENU_ID = 'buscalaTvMenuContext';
+
 // ⚒️ helpers
 function getBuscalaTvUrl(movie) {
-  const queryParam = encodeURIComponent(movie);
-  return `https://buscala.tv/?search=${queryParam}`;
+  const queryParameter = encodeURIComponent(movie);
+  return `${BASE_URL}/?search=${queryParameter}`;
 }
 
 // 🎬 create "buscalaTvMenuContext" menu context to all pages
 function handleInstallContextMenu() {
   chrome.contextMenus.create({
+    id: CONTEXT_MENU_ID,
     contexts: ['selection'],
-    id: 'buscalaTvMenuContext',
     title: 'Buscala.TV | ¿Dónde miro "%s"?',
   });
 }
