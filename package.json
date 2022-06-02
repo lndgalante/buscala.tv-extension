@@ -1,11 +1,24 @@
 {
-  "name": "buscala.tv-extension",
-  "version": "1.0.0",
-  "main": "index.js",
-  "repository": "git@github.com:lndgalante/buscala.tv-extension.git",
-  "author": "Leonardo Galante <lndgalante@gmail.com>",
   "license": "MIT",
+  "version": "1.0.0",
+  "source": "app.ts",
+  "main": "src/background.js",
+  "name": "buscala.tv-extension",
+  "author": "Leonardo Galante <lndgalante@gmail.com>",
+  "repository": "git@github.com:lndgalante/buscala.tv-extension.git",
+  "targets": {
+    "main": {
+      "optimize": true
+    }
+  },
+  "devDependencies": {
+    "parcel": "^2.6.0",
+    "@types/chrome": "^0.0.188"
+  },
   "scripts": {
-    "build": "zip -r -j -X buscala-tv.zip src/"
+    "parcel:watch": "parcel watch",
+    "parcel:build": "parcel build --no-source-maps",
+    "macos:zip": "zip -r -j -X buscala-tv.zip src/",
+    "chrome:release": "yarn parcel:build && yarn macos:zip"
   }
 }
