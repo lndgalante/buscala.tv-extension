@@ -10,6 +10,7 @@
 
 5. En la sección **Product details** completar con los siguientes datos
 
+- Description: Selecciona el texto de tu película o serie y te buscamos en que servicios de Streaming podes verla.
 - Category: Search Tools
 - Language: Spanish (Latin America)
 
