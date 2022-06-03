@@ -13,12 +13,14 @@
   },
   "devDependencies": {
     "parcel": "^2.6.0",
+    "typescript": "^4.7.3",
     "@types/chrome": "^0.0.188"
   },
   "scripts": {
+    "type:check": "tsc --noEmit",
     "parcel:watch": "parcel watch",
     "parcel:build": "parcel build --no-source-maps",
     "macos:zip": "zip -r -j -X buscala-tv.zip src/",
-    "chrome:release": "yarn parcel:build && yarn macos:zip"
+    "chrome:release": "yarn type:check && yarn parcel:build && yarn macos:zip"
   }
 }
