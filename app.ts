@@ -3,8 +3,13 @@ const BASE_URL = 'https://www.buscala.tv';
 const CONTEXT_MENU_ID = 'buscalaTvMenuContext';
 
 // 🔧 helpers
+function getQueryParameters(parameters: { [key: string]: string }) {
+  return Object.entries(parameters).reduce((accumulator, [key, value]) => `${accumulator}&${key}=${value}`, '');
+}
+
 function getBuscalaTvUrl(movie: string) {
-  return `${BASE_URL}/?search=${encodeURIComponent(movie)}&origin=addon`;
+  const queryParameters = getQueryParameters({ search: encodeURIComponent(movie), origin: 'addon' });
+  return `${BASE_URL}/?${queryParameters}`;
 }
 
 // 🎬 create "buscalaTvMenuContext" menu context to all pages
