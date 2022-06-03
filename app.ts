@@ -4,7 +4,8 @@ const CONTEXT_MENU_ID = 'buscalaTvMenuContext';
 
 // 🔧 helpers
 function getQueryParameters(parameters: { [key: string]: string }) {
-  return Object.entries(parameters).reduce((accumulator, [key, value]) => `${accumulator}&${key}=${value}`, '');
+  const entries = Object.entries(parameters);
+  return entries.reduce((accumulator: string, [key, value]: [string, string]) => `${accumulator}&${key}=${value}`, '');
 }
 
 function getBuscalaTvUrl(movie: string) {
@@ -19,7 +20,8 @@ function handleInstallContextMenu() {
 
 // 🐭 create click event for "buscalaTvMenuContext" menu context
 function handleContextMenuClick(data: chrome.contextMenus.OnClickData) {
-  chrome.tabs.create({ url: getBuscalaTvUrl(data?.selectionText) });
+  if (!data?.selectionText) return;
+  chrome.tabs.create({ url: getBuscalaTvUrl(data.selectionText) });
 }
 
 // 📎 attach event listeners to chrome runtime and context menus
